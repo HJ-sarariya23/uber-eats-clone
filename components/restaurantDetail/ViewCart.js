@@ -14,7 +14,7 @@ export default function ViewCart({ navigation }) {
   );
 
   const total = items
-    .map((item) => Number(item.price.replace("$", "")))
+    .map((item) => Number(item.price.replace("₹", "")))
     .reduce((prev, curr) => prev + curr, 0);
 
   const totalUSD = total.toLocaleString("en", {
@@ -50,7 +50,7 @@ export default function ViewCart({ navigation }) {
             ))}
             <View style={styles.subtotalContainer}>
               <Text style={styles.subtotalText}>Subtotal</Text>
-              <Text>${totalUSD}</Text>
+              <Text>₹{totalUSD}</Text>
             </View>
             <View style={{ flexDirection: "row", justifyContent: "center" }}>
               <TouchableOpacity
@@ -78,7 +78,7 @@ export default function ViewCart({ navigation }) {
                     top: 17,
                   }}
                 >
-                  ${total ? totalUSD : ""}
+                  ₹{total ? totalUSD : ""}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -145,7 +145,7 @@ export default function ViewCart({ navigation }) {
                   fontSize: 20,
                 }}
               >
-                ${totalUSD}
+                ₹{totalUSD}
               </Text>
             </TouchableOpacity>
           </View>

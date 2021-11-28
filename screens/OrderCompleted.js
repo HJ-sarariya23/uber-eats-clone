@@ -11,7 +11,7 @@ export default function OrderCompleted() {
       {
         title: "Bologna",
         description: "With butter lettuce, tomato and sauce bechamel",
-        price: "$13.50",
+        price: "₹13.50",
         image:
           "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg",
       },
@@ -23,7 +23,7 @@ export default function OrderCompleted() {
   );
 
   const total = items
-    .map((item) => Number(item.price.replace("$", "")))
+    .map((item) => Number(item.price.replace("₹", "")))
     .reduce((prev, curr) => prev + curr, 0);
 
   const totalUSD = total.toLocaleString("en", {
@@ -71,7 +71,7 @@ export default function OrderCompleted() {
           loop={false}
         />
         <Text style={{ fontSize: 20, fontWeight: "bold", paddingBottom: 5 }}>
-          Your order at {restaurantName} has been placed for {totalUSD}
+          Your order at {restaurantName} has been placed for ₹{totalUSD}
         </Text>
         <ScrollView showsVerticalScrollIndicator={false}>
           <MenuItems
