@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
 
 const Headertabs = (props) => {
   return (
@@ -36,5 +36,3 @@ const HeaderButton = (props) => (
 );
 
 export default Headertabs;
-
-const styles = StyleSheet.create({});

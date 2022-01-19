@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 
 const items = [
   {
@@ -64,5 +64,3 @@ const Categories = () => {
 };
 
 export default Categories;
-
-const styles = StyleSheet.create({});
